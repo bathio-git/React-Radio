@@ -1,38 +1,208 @@
-.App {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -------------------------------------- */
+html {
+  height: 100%;
+}
+
+body {  
+  background-color: black; 
+  color: white ; 
+  min-height: 100%;
+
+}
+
+/*  https://www.fatype.com/typefaces/beausite */
+
+@font-face {
+  font-family: _Medium;
+  src: url(./TypeFace/IBMPlexMono-Medium.ttf);
+}
+
+@font-face {
+  font-family: _Regular;
+  src: url(./TypeFace/IBMPlexMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: _Light;
+  src: url(./TypeFace/IBMPlexMono-Light.ttf);
+}
+
+@font-face {
+  font-family: _Bold;
+  src: url(./TypeFace/IBMPlexMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: _Semibold;
+  src: url(./TypeFace/IBMPlexMono-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: _SemiboldItalic;
+  src: url(./TypeFace/IBMPlexMono-SemiBoldItalic.ttf);
+}
+
+/*       https://www.sitepoint.com/css-typewriter-effect/       */
+
+.container{
+  display: inline-block;
+}
+.typed-out{
+  overflow: hidden;
+  /*border-right: .15em solid #aaa;*/
+  white-space: nowrap;
+  animation: 
+  typing 36.2s steps(26, end) infinite;
+  font-size: 1.6rem;
+  width: 0; 
+}
+@keyframes typing {
+  0% { width: 0 }
+  10% { width: 100% }
+  20%{ width:100%}
+  25% {width: 0%;}
+  100%{width: 0%;}
+}
+/*    ---- bathio.xyz ----     */
+button {
+
+  border: none;
   text-align: center;
+  padding: 0px 0px;
+  
+  font-size: 18px;
+  margin: 4px 2px;
+  transition-duration: 0.1s;
+  cursor: pointer;
+  font-family: _Regular;
+  background-color: black;
+  color:rgb(170,170,170);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button:hover {
+  background-color: black;
   color: white;
+  text-decoration: overline;
 }
 
-.App-link {
-  color: #61dafb;
+a:link {
+  color: #AAAAAA;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 20px ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:visited{
+  color:  #AAAAAA;
+}
+
+a:hover {
+  color: white;
+  text-decoration: overline;
+}
+
+video::-webkit-media-controls-volume-slider {
+  display: none;
+}
+
+video::-webkit-media-controls-mute-button {
+  display: none;
+}
+
+p {
+  color: #aaa;
+}
+
+input[type=range][orient=vertical]
+{
+  -webkit-appearance: none;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  width: 60%;
+  height: 5%;
+  background: black;
+  outline: none;
+  
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+input[type=range][orient=vertical]:hover {
+  opacity: 0.9;
+  background: #AAAAAA;
+}
+
+input[type=range][orient=vertical]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 5px;
+  background: #AAAAAA;
+  cursor: pointer;
+}
+
+input[type=range][orient=vertical]::-webkit-slider-thumb:hover {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 5px;
+  background: white;
+  cursor: pointer;
+}
+
+input[type=range][orient=vertical]::-moz-range-thumb {
+  width: 25px;
+  height: 5px;
+  background: #AAAAAA;
+  cursor: pointer;
 }
